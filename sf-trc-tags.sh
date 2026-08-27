@@ -250,12 +250,12 @@ for arg in ${TE_IUT_DEV_ARGS:-${TE_DPDK_DEV_ARGS}} ; do
         fw_variant=full-feature)
             rx_dpcpu_expected="full-featured"
             tx_dpcpu_expected="full-featured"
-            do_cmdclient "drv_detach;drv_attach full_featured;quit"
+            do_cmdclient "drv_detach;drv_attach full_featured;quit" >&2
             ;;
         fw_variant=ultra-low-latency)
             rx_dpcpu_expected="low-latency"
             tx_dpcpu_expected="low-latency"
-            do_cmdclient "drv_detach;drv_attach low_latency;quit"
+            do_cmdclient "drv_detach;drv_attach low_latency;quit" >&2
             ;;
     esac
 done
